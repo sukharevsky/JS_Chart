@@ -1,0 +1,206 @@
+html {
+  -ms-overflow-style: scrollbar;
+  scroll-behavior: smooth;
+}
+
+.Button {
+  border-radius: 10px;
+  border: 3px solid #73AD21;
+  padding: 10px 20px;
+  color: #999999;
+  background-color: #f3f3f3;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.Active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.Horizontal {
+  display: inline-flex;
+  flex-flow: row nowrap; 
+  height: 99.99%;
+  width: 100%;
+}
+
+.Vertical {
+  height: 99.99%;
+  display: inline-flex;
+  flex-flow: column nowrap; 
+}
+
+.Resizable {
+  flex: 1 1 auto;
+}
+
+.Wrapper {
+  position: relative;
+  width: 100%;
+  height: 99.99%;
+  padding: 0px 5px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.Toolbar {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;  
+}
+
+.Control {
+  border: 1px solid black;
+  border-radius: 100%;
+  padding: 15px;
+}
+
+.Control label {
+  display: inline-block;
+  margin-left: 10px;
+  box-sizing: border-box;
+  width: 0;
+  height: 38px;
+  cursor: pointer;
+  border-color: transparent transparent transparent #202020;
+  transition: 100ms all ease;
+  will-change: border-width;
+  border-style: solid;
+  border-width: 19px 0 19px 35px;
+}
+
+.Control input[type='checkbox'] {
+  display: none;
+  visibility: hidden;
+}
+
+.Control input[type='checkbox']:checked + label {
+  border-style: double;
+  border-width: 0px 0px 0px 35px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.Panel {
+  border: 1px solid #e7e7e7;
+  margin: 0px; padding: 0px;
+  z-index: 10;
+}
+
+.Scrollable {
+  -ms-overflow-style: scrollbar;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: auto;
+  width: 100%;
+  z-index: 10;
+}
+
+.Graph {
+  overflow: visible;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+  .Scrollable { padding-bottom: 17px; } 
+}
+
+@supports (-ms-ime-align: auto) { 
+  .Scrollable { padding-bottom: 12px; } 
+}
+
+.Container {
+  overflow: hidden; 
+  width: 100%; 
+}
+
+.Scene {
+  position: relative;
+  overflow: visible;
+  z-index: 10;
+}
+
+.Axis {
+  position: relative;
+  bottom: 0;
+  flex: 1 0 auto;
+  height: 99.99%;
+  width: auto;
+  display: inline-block;
+  z-index: 1;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+  .MS { padding-bottom: 17px; box-sizing:border-box;} 
+}
+
+@supports (-ms-ime-align: auto) { 
+  .MS { padding-bottom: 12px; box-sizing:border-box;} 
+}
+
+.Y_Axis {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.X_Axis {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+}
+
+.X_Axis_Label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: visible;
+  display: inline-block;
+  text-align: center;
+}
+
+.Tick {
+  position: absolute;
+  display: inline-block;
+  z-index: 10;
+}
+
+.Label {
+  transform: translate(-50%, -50%);
+  text-align: right;
+}
+
+.Fixed {
+  position: absolute;
+  overflow: visible;
+  box-sizing:border-box;
+}
+
+.Pane {
+  position: relative;
+  overflow: visible;
+  box-sizing:border-box;
+}
+
+.Box {
+  border: 2px solid blue; /* demo purposes */
+  display: inline-block;
+  line-height: 0;
+}
+
+.Template {
+  display: none;
+}
